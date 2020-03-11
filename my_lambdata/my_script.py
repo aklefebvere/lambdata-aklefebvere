@@ -1,15 +1,16 @@
 import pandas as pd
-
-from my_lambdata.my_mod import add_col
-from my_lambdata.my_mod import is_nan
-
-df = pd.DataFrame({"State":["CT", "CO", "CA", "TX"]})
-
-add_col(df, 'Name', ['Connecticut', 'Colorado', 'California', 'Texas'])
+from sklearn.model_selection import train_test_split
 
 
-print(is_nan(df))
+from my_lambdata.my_mod import Mod_df
 
+df = pd.DataFrame({"State": ["CT", "CO", "CA", "TX"]})
 
-print(df.head())
+df = Mod_df(df)
 
+df.add_col('Name', ['Connecticut', 'Colorado', 'California', 'Texas'])
+
+train, test = df.split_df()
+
+print(df.is_nan())
+print(train.shape, test.shape)
