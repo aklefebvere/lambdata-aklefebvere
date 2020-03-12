@@ -37,3 +37,10 @@ df = mod_df(df)
  # Splits the dataframe into a 80 | 20 split
  train, test = df.split_df()
  ```
+
+  ```py
+ # To access the dataframe that you passed into the class
+ df = mod_df(df)
+ # df is the parameter name of the df you pass in
+ df.df.head()
+ ```
