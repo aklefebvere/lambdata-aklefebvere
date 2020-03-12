@@ -11,6 +11,5 @@ df = Mod_df(df)
 df.add_col('Name', ['Connecticut', 'Colorado', 'California', 'Texas'])
 
 train, test = df.split_df()
-
-print(df.is_nan())
+type(df.df.isna().sum())
 print(train.shape, test.shape)

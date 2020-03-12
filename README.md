@@ -7,35 +7,33 @@
 
  pip install -i https://test.pypi.org/simple/ lambdata-aklefebvere==1.5
 
+
  ```
 
-
-# Avaliable Functions from Mod_df class:
+# Usage
+## Avaliable Functions from Mod_df class:
 ```py
-df = mod_df(df)
 # Instansiate class object
+df = mod_df(df)
 ```
 
  ```py
  # add_col
  from my_lambdata.my_mod import Mod_df
-
- df.add_col('Name', ['Connecticut', 'Colorado', 'California', 'Texas'])
  # creates a new column in a dataframe given a list of values
+ df.add_col('Name', ['Connecticut', 'Colorado', 'California', 'Texas'])
  ```
 
  ```py
  # is_nan
  from my_lambdata.my_mod import Mod_df
-
- df.is_nan()
  # Checks for nans in the dataframe given to the function
+ df.is_nan()
  ```
 
  ```py
  # split_df
  from my_lambdata.my_mod import Mod_df
-
- train, test = df.split_df()
  # Splits the dataframe into a 80 | 20 split
+ train, test = df.split_df()
  ```

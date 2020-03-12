@@ -6,12 +6,13 @@
 
 import pandas as pd
 
-# State abbreviation -> Full Name and visa versa. FL -> Florida, etc. 
+# State abbreviation -> Full Name and visa versa. FL -> Florida, etc.
 # (Handle Washington DC and territories like Puerto Rico etc.)
 # Add a column with the state names
 
+
 class MyFrame(pd.DataFrame):
-    
+
     def add_state_names(self):
         """
         Add a column of state names to a dataframe that already has the abbrevs
@@ -76,9 +77,11 @@ class MyFrame(pd.DataFrame):
             'WI': 'Wisconsin',
             'WV': 'West Virginia',
             'WY': 'Wyoming'
-        } # http://code.activestate.com/recipes/577305-python-dictionary-of-us-states-and-territories/
-        #breakpoint() # python 3.7 or later, otherwise use pdb module
-        self["name"] = self["abbrev"].map(names_map) # see: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html
+        }  # http://code.activestate.com/recipes/577305-python-dictionary-of-us-states-and-territories/
+        # breakpoint() # python 3.7 or later, otherwise use pdb module
+        # see:
+        # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html
+        self["name"] = self["abbrev"].map(names_map)
 
 
 # df = pd.DataFrame({"abbrev": ["CT", "CO", "CA", "TX"]})

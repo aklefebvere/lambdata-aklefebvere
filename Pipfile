@@ -11,6 +11,7 @@ twine = "*"
 pandas = "*"
 autopep8 = "*"
 scikit-learn = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.7"
